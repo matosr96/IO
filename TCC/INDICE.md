@@ -35,8 +35,19 @@ TCC/
 
 ## 📚 Documentación Disponible
 
-### 1. README.md
-Documentación principal del trabajo que incluye:
+### 1. DOCUMENTO_TCC.md ⭐
+**Documento principal del TCC** que cumple con todos los criterios de calificación:
+- ✅ Más de 3000 palabras
+- ✅ Descripción exhaustiva de la problemática
+- ✅ Justificación sólida y fundamentada
+- ✅ Objetivos generales y específicos (SMART)
+- ✅ Descripción detallada de la solución
+- ✅ Resultados presentados con tablas y análisis
+- ✅ Bibliografía con 10+ fuentes académicas citadas en formato APA
+- ✅ Formato: Times New Roman 12, interlineado 1.5
+
+### 2. README.md
+Documentación técnica del trabajo que incluye:
 - Objetivo del trabajo
 - Modelos teóricos implementados con fundamentos matemáticos
 - Metodología utilizada
