@@ -20,19 +20,19 @@ Se utiliza **Optimización Multiobjetivo** porque:
 
 | Programador | Salario ($/hora) |
 |-------------|------------------|
-| Ana | 50 |
-| Luis | 45 |
-| Marta | 55 |
-| Carlos | 40 |
+| Matos | 50 |
+| Tania | 45 |
+| Valeria | 55 |
+| Salvador | 40 |
 
 ### Matriz de Tiempos (horas)
 
 | Programador\Tarea | Tarea 1 | Tarea 2 | Tarea 3 | Tarea 4 |
 |-------------------|---------|---------|---------|---------|
-| Ana | 6 | 8 | 7 | 9 |
-| Luis | 9 | 6 | 8 | 7 |
-| Marta | 7 | 5 | 9 | 6 |
-| Carlos | 8 | 7 | 6 | 5 |
+| Matos | 6 | 8 | 7 | 9 |
+| Tania | 9 | 6 | 8 | 7 |
+| Valeria | 7 | 5 | 9 | 6 |
+| Salvador | 8 | 7 | 6 | 5 |
 
 ### Matriz de Costos ($)
 
@@ -40,10 +40,10 @@ Los costos se calculan como: **Costo = Tiempo × Salario**
 
 | Programador\Tarea | Tarea 1 | Tarea 2 | Tarea 3 | Tarea 4 |
 |-------------------|---------|---------|---------|---------|
-| Ana | $300 | $400 | $350 | $450 |
-| Luis | $405 | $270 | $360 | $315 |
-| Marta | $385 | $275 | $495 | $330 |
-| Carlos | $320 | $280 | $240 | $200 |
+| Matos | $300 | $400 | $350 | $450 |
+| Tania | $405 | $270 | $360 | $315 |
+| Valeria | $385 | $275 | $495 | $330 |
+| Salvador | $320 | $280 | $240 | $200 |
 
 ## Formulación del Modelo
 

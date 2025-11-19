@@ -90,7 +90,7 @@ Propuestas de implementación desarrolladas para empresas tecnológicas:
 **Ubicación:** `ejercicio_01_asignacion_tareas/`
 
 **Resultado esperado:**
-- Solución óptima: Ana→T1, Luis→T2, Marta→T4, Carlos→T3
+- Solución óptima: Matos→T1, Tania→T2, Valeria→T4, Salvador→T3
 - Tiempo total mínimo: 24 horas
 
 ---

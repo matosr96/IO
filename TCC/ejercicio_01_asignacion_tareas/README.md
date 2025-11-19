@@ -19,10 +19,10 @@ Se utiliza el **Modelo de Asignación** porque:
 
 | Programador | Tarea 1 | Tarea 2 | Tarea 3 | Tarea 4 |
 |-------------|---------|---------|---------|---------|
-| Ana         | 6       | 8       | 7       | 9       |
-| Luis        | 9       | 6       | 8       | 7       |
-| Marta       | 7       | 5       | 9       | 6       |
-| Carlos      | 8       | 7       | 6       | 5       |
+| Matos       | 6       | 8       | 7       | 9       |
+| Tania       | 9       | 6       | 8       | 7       |
+| Valeria     | 7       | 5       | 9       | 6       |
+| Salvador    | 8       | 7       | 6       | 5       |
 
 ## Formulación del Modelo
 
@@ -36,7 +36,7 @@ x_{ij} = \begin{cases}
 \]
 
 Donde:
-- **Programadores:** Ana (i=1), Luis (i=2), Marta (i=3), Carlos (i=4)
+- **Programadores:** Matos (i=1), Tania (i=2), Valeria (i=3), Salvador (i=4)
 - **Tareas:** T1 (j=1), T2 (j=2), T3 (j=3), T4 (j=4)
 
 ### Función Objetivo
@@ -78,10 +78,10 @@ x_{ij} \in \{0,1\} \quad \forall i,j
 ### Resultado Óptimo
 
 **Asignación óptima encontrada:**
-- Ana → Tarea 1 (6 horas)
-- Luis → Tarea 2 (6 horas)
-- Marta → Tarea 4 (6 horas)
-- Carlos → Tarea 3 (6 horas)
+- Matos → Tarea 1 (6 horas)
+- Tania → Tarea 2 (6 horas)
+- Valeria → Tarea 4 (6 horas)
+- Salvador → Tarea 3 (6 horas)
 
 **Tiempo total mínimo: 24 horas**
 

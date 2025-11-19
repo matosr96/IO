@@ -20,7 +20,7 @@ def resolver_asignacion():
     Resuelve el problema de asignación usando el algoritmo húngaro.
     
     Matriz de costos (tiempos en horas):
-    Filas: Programadores (Ana, Luis, Marta, Carlos)
+    Filas: Programadores (Matos, Tania, Valeria, Salvador)
     Columnas: Tareas (1, 2, 3, 4)
     """
     if not SCIPY_AVAILABLE:
@@ -28,16 +28,16 @@ def resolver_asignacion():
         return None, None
     
     # Matriz de tiempos estimados (en horas)
-    # Filas: Ana, Luis, Marta, Carlos
+    # Filas: Matos, Tania, Valeria, Salvador
     # Columnas: Tarea 1, Tarea 2, Tarea 3, Tarea 4
     tiempos = np.array([
-        [6, 8, 7, 9],  # Ana
-        [9, 6, 8, 7],  # Luis
-        [7, 5, 9, 6],  # Marta
-        [8, 7, 6, 5]   # Carlos
+        [6, 8, 7, 9],  # Matos
+        [9, 6, 8, 7],  # Tania
+        [7, 5, 9, 6],  # Valeria
+        [8, 7, 6, 5]   # Salvador
     ])
     
-    programadores = ['Ana', 'Luis', 'Marta', 'Carlos']
+    programadores = ['Matos', 'Tania', 'Valeria', 'Salvador']
     tareas = ['Tarea 1', 'Tarea 2', 'Tarea 3', 'Tarea 4']
     
     print("=" * 70)
@@ -92,16 +92,16 @@ def resolver_sin_dependencias():
     Usa fuerza bruta con permutaciones (factible para problemas pequeños).
     """
     # Matriz de tiempos estimados (en horas)
-    # Filas: Ana, Luis, Marta, Carlos
+    # Filas: Matos, Tania, Valeria, Salvador
     # Columnas: Tarea 1, Tarea 2, Tarea 3, Tarea 4
     tiempos = [
-        [6, 8, 7, 9],  # Ana
-        [9, 6, 8, 7],  # Luis
-        [7, 5, 9, 6],  # Marta
-        [8, 7, 6, 5]   # Carlos
+        [6, 8, 7, 9],  # Matos
+        [9, 6, 8, 7],  # Tania
+        [7, 5, 9, 6],  # Valeria
+        [8, 7, 6, 5]   # Salvador
     ]
     
-    programadores = ['Ana', 'Luis', 'Marta', 'Carlos']
+    programadores = ['Matos', 'Tania', 'Valeria', 'Salvador']
     tareas = ['Tarea 1', 'Tarea 2', 'Tarea 3', 'Tarea 4']
     
     print("=" * 70)
@@ -174,14 +174,14 @@ def resolver_con_pulp():
         problema = pulp.LpProblem("Asignacion_Tareas", pulp.LpMinimize)
         
         # Datos
-        programadores = ['Ana', 'Luis', 'Marta', 'Carlos']
+        programadores = ['Matos', 'Tania', 'Valeria', 'Salvador']
         tareas = ['Tarea1', 'Tarea2', 'Tarea3', 'Tarea4']
         
         tiempos = {
-            ('Ana', 'Tarea1'): 6, ('Ana', 'Tarea2'): 8, ('Ana', 'Tarea3'): 7, ('Ana', 'Tarea4'): 9,
-            ('Luis', 'Tarea1'): 9, ('Luis', 'Tarea2'): 6, ('Luis', 'Tarea3'): 8, ('Luis', 'Tarea4'): 7,
-            ('Marta', 'Tarea1'): 7, ('Marta', 'Tarea2'): 5, ('Marta', 'Tarea3'): 9, ('Marta', 'Tarea4'): 6,
-            ('Carlos', 'Tarea1'): 8, ('Carlos', 'Tarea2'): 7, ('Carlos', 'Tarea3'): 6, ('Carlos', 'Tarea4'): 5
+            ('Matos', 'Tarea1'): 6, ('Matos', 'Tarea2'): 8, ('Matos', 'Tarea3'): 7, ('Matos', 'Tarea4'): 9,
+            ('Tania', 'Tarea1'): 9, ('Tania', 'Tarea2'): 6, ('Tania', 'Tarea3'): 8, ('Tania', 'Tarea4'): 7,
+            ('Valeria', 'Tarea1'): 7, ('Valeria', 'Tarea2'): 5, ('Valeria', 'Tarea3'): 9, ('Valeria', 'Tarea4'): 6,
+            ('Salvador', 'Tarea1'): 8, ('Salvador', 'Tarea2'): 7, ('Salvador', 'Tarea3'): 6, ('Salvador', 'Tarea4'): 5
         }
         
         # Variables de decisión binarias

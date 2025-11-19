@@ -32,7 +32,7 @@ Cada carpeta contiene:
 
 Asignar 4 tareas a 4 programadores para minimizar el tiempo total.
 
-**Solución:** Ana→T1, Luis→T2, Marta→T4, Carlos→T3 (24 horas)
+**Solución:** Matos→T1, Tania→T2, Valeria→T4, Salvador→T3 (24 horas)
 
 [Ver detalles](ejercicio_01_asignacion_tareas/README.md)
 

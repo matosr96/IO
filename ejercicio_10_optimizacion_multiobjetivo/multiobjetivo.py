@@ -18,12 +18,12 @@ def resolver_multiobjetivo():
     Resuelve el problema de optimización multiobjetivo.
     """
     # Programadores con salarios por hora
-    programadores = ['Ana', 'Luis', 'Marta', 'Carlos']
+    programadores = ['Matos', 'Tania', 'Valeria', 'Salvador']
     salarios = {
-        'Ana': 50,    # $/hora
-        'Luis': 45,
-        'Marta': 55,
-        'Carlos': 40
+        'Matos': 50,    # $/hora
+        'Tania': 45,
+        'Valeria': 55,
+        'Salvador': 40
     }
     
     # Tareas con tiempos estimados
@@ -31,10 +31,10 @@ def resolver_multiobjetivo():
     
     # Matriz de tiempos (horas)
     tiempos = {
-        ('Ana', 'Tarea 1'): 6, ('Ana', 'Tarea 2'): 8, ('Ana', 'Tarea 3'): 7, ('Ana', 'Tarea 4'): 9,
-        ('Luis', 'Tarea 1'): 9, ('Luis', 'Tarea 2'): 6, ('Luis', 'Tarea 3'): 8, ('Luis', 'Tarea 4'): 7,
-        ('Marta', 'Tarea 1'): 7, ('Marta', 'Tarea 2'): 5, ('Marta', 'Tarea 3'): 9, ('Marta', 'Tarea 4'): 6,
-        ('Carlos', 'Tarea 1'): 8, ('Carlos', 'Tarea 2'): 7, ('Carlos', 'Tarea 3'): 6, ('Carlos', 'Tarea 4'): 5
+        ('Matos', 'Tarea 1'): 6, ('Matos', 'Tarea 2'): 8, ('Matos', 'Tarea 3'): 7, ('Matos', 'Tarea 4'): 9,
+        ('Tania', 'Tarea 1'): 9, ('Tania', 'Tarea 2'): 6, ('Tania', 'Tarea 3'): 8, ('Tania', 'Tarea 4'): 7,
+        ('Valeria', 'Tarea 1'): 7, ('Valeria', 'Tarea 2'): 5, ('Valeria', 'Tarea 3'): 9, ('Valeria', 'Tarea 4'): 6,
+        ('Salvador', 'Tarea 1'): 8, ('Salvador', 'Tarea 2'): 7, ('Salvador', 'Tarea 3'): 6, ('Salvador', 'Tarea 4'): 5
     }
     
     # Calcular costos (tiempo * salario)
