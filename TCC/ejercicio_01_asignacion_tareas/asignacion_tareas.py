@@ -45,16 +45,16 @@ def resolver_problema_asignacion():
     usando el Algoritmo Húngaro como método principal.
     """
     # Matriz de tiempos estimados (en horas)
-    # Filas: Programadores (Matos, Tania, Valeria, Salvador)
+    # Filas: Programadores (Ana, Luis, Marta, Carlos)
     # Columnas: Tareas (1, 2, 3, 4)
     tiempos = np.array([
-        [6, 8, 7, 9],  # Matos
-        [9, 6, 8, 7],  # Tania
-        [7, 5, 9, 6],  # Valeria
-        [8, 7, 6, 5]   # Salvador
+        [6, 8, 7, 9],  # Ana
+        [9, 6, 8, 7],  # Luis
+        [7, 5, 9, 6],  # Marta
+        [8, 7, 6, 5]   # Carlos
     ])
     
-    programadores = ['Matos', 'Tania', 'Valeria', 'Salvador']
+    programadores = ['Ana', 'Luis', 'Marta', 'Carlos']
     tareas = ['Tarea 1', 'Tarea 2', 'Tarea 3', 'Tarea 4']
     
     print("=" * 70)

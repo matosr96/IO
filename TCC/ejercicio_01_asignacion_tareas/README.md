@@ -168,10 +168,10 @@ Esta función encuentra la asignación que minimiza la suma de costos (tiempos e
 
 | Programador | Tarea Asignada | Tiempo (horas) |
 |-------------|----------------|----------------|
-| Matos       | Tarea 1        | 6              |
-| Tania       | Tarea 2        | 6              |
-| Valeria     | Tarea 4        | 6              |
-| Salvador    | Tarea 3        | 6              |
+| Ana         | Tarea 1        | 6              |
+| Luis        | Tarea 2        | 6              |
+| Marta       | Tarea 4        | 6              |
+| Carlos      | Tarea 3        | 6              |
 
 **Tiempo total mínimo: 24 horas**
 
@@ -190,10 +190,10 @@ La solución fue validada mediante **Programación Lineal Entera** usando PuLP, 
 1. **Balance de tiempos:** Todos los programadores tienen tareas con tiempos similares (6 horas cada uno), lo que indica un buen balance de carga.
 
 2. **Eficiencia:** La asignación aprovecha las fortalezas relativas de cada programador:
-   - Matos es más eficiente en Tarea 1 (6h vs 9h, 7h, 8h de otros)
-   - Tania es más eficiente en Tarea 2 (6h vs 8h, 5h, 7h de otros)
-   - Valeria es más eficiente en Tarea 4 (6h vs 9h, 7h, 5h de otros)
-   - Salvador es más eficiente en Tarea 3 (6h vs 7h, 8h, 9h de otros)
+   - Ana es más eficiente en Tarea 1 (6h vs 9h, 7h, 8h de otros)
+   - Luis es más eficiente en Tarea 2 (6h vs 8h, 5h, 7h de otros)
+   - Marta es más eficiente en Tarea 4 (6h vs 9h, 7h, 5h de otros)
+   - Carlos es más eficiente en Tarea 3 (6h vs 7h, 8h, 9h de otros)
 
 3. **Optimalidad:** No existe otra asignación que produzca un tiempo total menor que 24 horas.
 
