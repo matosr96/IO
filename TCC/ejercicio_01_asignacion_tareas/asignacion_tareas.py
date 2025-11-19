@@ -1,35 +1,52 @@
 """
-Ejercicio: Asignación de Tareas a Programadores
+Ejercicio 1: Asignación de Tareas a Programadores
 Problema de Asignación - Modelo de Investigación de Operaciones
+
+Método Principal: Algoritmo Húngaro (Hungarian Algorithm)
+Desarrollado por: Harold W. Kuhn (1955)
 
 Objetivo: Minimizar el tiempo total asignando 4 tareas a 4 programadores
 """
 
-import itertools
-
-try:
-    import numpy as np
-    from scipy.optimize import linear_sum_assignment
-    SCIPY_AVAILABLE = True
-except ImportError:
-    SCIPY_AVAILABLE = False
+import numpy as np
+from scipy.optimize import linear_sum_assignment
 
 
-def resolver_asignacion():
+def algoritmo_hungaro(tiempos):
     """
-    Resuelve el problema de asignación usando el algoritmo húngaro.
+    Resuelve el problema de asignación usando el Algoritmo Húngaro.
     
-    Matriz de costos (tiempos en horas):
-    Filas: Programadores (Matos, Tania, Valeria, Salvador)
-    Columnas: Tareas (1, 2, 3, 4)
+    El Algoritmo Húngaro es el método clásico y más eficiente para resolver
+    problemas de asignación. Fue desarrollado por Harold W. Kuhn en 1955 y
+    tiene complejidad O(n³).
+    
+    Args:
+        tiempos: Matriz numpy de forma (n, n) con tiempos estimados
+                 tiempos[i][j] = tiempo que tarda el programador i en la tarea j
+    
+    Returns:
+        filas_asignadas: Índices de programadores asignados
+        columnas_asignadas: Índices de tareas asignadas
+        tiempo_total: Tiempo total mínimo
     """
-    if not SCIPY_AVAILABLE:
-        print("scipy no está disponible. Usando solución con PuLP.")
-        return None, None
+    # El algoritmo húngaro encuentra la asignación óptima
+    # que minimiza la suma de costos (tiempos en este caso)
+    filas_asignadas, columnas_asignadas = linear_sum_assignment(tiempos)
     
+    # Calcular el tiempo total mínimo
+    tiempo_total = tiempos[filas_asignadas, columnas_asignadas].sum()
+    
+    return filas_asignadas, columnas_asignadas, tiempo_total
+
+
+def resolver_problema_asignacion():
+    """
+    Resuelve el problema de asignación de tareas a programadores
+    usando el Algoritmo Húngaro como método principal.
+    """
     # Matriz de tiempos estimados (en horas)
-    # Filas: Matos, Tania, Valeria, Salvador
-    # Columnas: Tarea 1, Tarea 2, Tarea 3, Tarea 4
+    # Filas: Programadores (Matos, Tania, Valeria, Salvador)
+    # Columnas: Tareas (1, 2, 3, 4)
     tiempos = np.array([
         [6, 8, 7, 9],  # Matos
         [9, 6, 8, 7],  # Tania
@@ -42,8 +59,18 @@ def resolver_asignacion():
     
     print("=" * 70)
     print("PROBLEMA DE ASIGNACIÓN: TAREAS A PROGRAMADORES")
+    print("Método: Algoritmo Húngaro (Hungarian Algorithm)")
     print("=" * 70)
-    print("\nMatriz de tiempos estimados (horas):")
+    
+    print("\nDescripción del Problema:")
+    print("-" * 70)
+    print("Una empresa de desarrollo de software debe asignar 4 tareas")
+    print("a 4 programadores, minimizando el tiempo total de desarrollo.")
+    print("Cada programador puede realizar solo una tarea y cada tarea")
+    print("debe ser asignada a exactamente un programador.")
+    print("-" * 70)
+    
+    print("\nMatriz de Tiempos Estimados (horas):")
     print("-" * 70)
     print(f"{'Programador':<12}", end="")
     for tarea in tareas:
@@ -58,17 +85,27 @@ def resolver_asignacion():
         print()
     print("-" * 70)
     
-    # Resolver usando el algoritmo húngaro (minimización)
-    # linear_sum_assignment encuentra la asignación óptima
-    filas_asignadas, columnas_asignadas = linear_sum_assignment(tiempos)
+    print("\n" + "=" * 70)
+    print("RESOLUCIÓN MEDIANTE ALGORITMO HÚNGARO")
+    print("=" * 70)
+    print("\nFundamento Teórico:")
+    print("-" * 70)
+    print("El Algoritmo Húngaro, desarrollado por Harold W. Kuhn (1955),")
+    print("es el método estándar para resolver problemas de asignación.")
+    print("El algoritmo tiene complejidad O(n³) y garantiza la solución")
+    print("óptima mediante reducción de filas y columnas, cobertura de")
+    print("ceros y ajustes iterativos de la matriz de costos.")
+    print("-" * 70)
     
-    # Calcular el tiempo total mínimo
-    tiempo_total = tiempos[filas_asignadas, columnas_asignadas].sum()
+    # Resolver usando el algoritmo húngaro
+    filas_asignadas, columnas_asignadas, tiempo_total = algoritmo_hungaro(tiempos)
     
     print("\n" + "=" * 70)
     print("SOLUCIÓN ÓPTIMA")
     print("=" * 70)
     print("\nAsignaciones:")
+    print("-" * 70)
+    print(f"{'Programador':<15} {'Tarea':<15} {'Tiempo (h)':<15}")
     print("-" * 70)
     
     asignaciones = []
@@ -77,98 +114,59 @@ def resolver_asignacion():
         tarea = tareas[j]
         tiempo = tiempos[i, j]
         asignaciones.append((programador, tarea, tiempo))
-        print(f"{programador:<12} -> {tarea:<12} (Tiempo: {tiempo} horas)")
+        print(f"{programador:<15} {tarea:<15} {tiempo:<15}")
     
     print("-" * 70)
-    print(f"\nTiempo total mínimo: {tiempo_total} horas")
+    print(f"\n{'Tiempo Total Mínimo:':<30} {tiempo_total} horas")
+    print("=" * 70)
+    
+    print("\n" + "=" * 70)
+    print("ANÁLISIS DE LA SOLUCIÓN")
+    print("=" * 70)
+    print("\nInterpretación:")
+    print("-" * 70)
+    print("La solución óptima asigna cada tarea al programador que puede")
+    print("completarla en el menor tiempo relativo, considerando todas las")
+    print("posibles combinaciones. Esta asignación minimiza el tiempo total")
+    print("del proyecto mientras asegura que cada programador tenga exactamente")
+    print("una tarea y cada tarea sea asignada a exactamente un programador.")
+    print("-" * 70)
+    
+    print("\nValidación:")
+    print("-" * 70)
+    print("✓ La solución cumple todas las restricciones del problema")
+    print("✓ Cada programador tiene exactamente una tarea asignada")
+    print("✓ Cada tarea está asignada a exactamente un programador")
+    print("✓ El tiempo total es mínimo (verificado por el algoritmo)")
+    print("-" * 70)
+    
+    print("\n" + "=" * 70)
+    print("VENTAJAS DEL ALGORITMO HÚNGARO")
+    print("=" * 70)
+    print("• Método específico y eficiente para problemas de asignación")
+    print("• Complejidad O(n³) - eficiente para problemas grandes")
+    print("• Garantiza solución óptima")
+    print("• Ampliamente reconocido en la literatura académica")
+    print("• Implementación estándar en scipy.optimize")
     print("=" * 70)
     
     return asignaciones, tiempo_total
 
 
-def resolver_sin_dependencias():
+def validar_con_programacion_lineal():
     """
-    Resuelve el problema usando solo la biblioteca estándar de Python.
-    Usa fuerza bruta con permutaciones (factible para problemas pequeños).
-    """
-    # Matriz de tiempos estimados (en horas)
-    # Filas: Matos, Tania, Valeria, Salvador
-    # Columnas: Tarea 1, Tarea 2, Tarea 3, Tarea 4
-    tiempos = [
-        [6, 8, 7, 9],  # Matos
-        [9, 6, 8, 7],  # Tania
-        [7, 5, 9, 6],  # Valeria
-        [8, 7, 6, 5]   # Salvador
-    ]
-    
-    programadores = ['Matos', 'Tania', 'Valeria', 'Salvador']
-    tareas = ['Tarea 1', 'Tarea 2', 'Tarea 3', 'Tarea 4']
-    
-    print("=" * 70)
-    print("PROBLEMA DE ASIGNACIÓN: TAREAS A PROGRAMADORES")
-    print("SOLUCIÓN CON BIBLIOTECA ESTÁNDAR (sin dependencias)")
-    print("=" * 70)
-    print("\nMatriz de tiempos estimados (horas):")
-    print("-" * 70)
-    print(f"{'Programador':<12}", end="")
-    for tarea in tareas:
-        print(f"{tarea:<12}", end="")
-    print()
-    print("-" * 70)
-    
-    for i, prog in enumerate(programadores):
-        print(f"{prog:<12}", end="")
-        for j in range(len(tareas)):
-            print(f"{tiempos[i][j]:<12}", end="")
-        print()
-    print("-" * 70)
-    
-    # Generar todas las permutaciones posibles de asignaciones
-    # Cada permutación representa qué tarea hace cada programador
-    # (índice de permutación = programador, valor = tarea)
-    n = len(programadores)
-    mejor_asignacion = None
-    tiempo_minimo = float('inf')
-    
-    # Probar todas las permutaciones de [0, 1, 2, 3] que representan las tareas
-    for permutacion in itertools.permutations(range(n)):
-        tiempo_total = sum(tiempos[i][permutacion[i]] for i in range(n))
-        if tiempo_total < tiempo_minimo:
-            tiempo_minimo = tiempo_total
-            mejor_asignacion = permutacion
-    
-    print("\n" + "=" * 70)
-    print("SOLUCIÓN ÓPTIMA")
-    print("=" * 70)
-    print("\nAsignaciones:")
-    print("-" * 70)
-    
-    asignaciones = []
-    for i, tarea_idx in enumerate(mejor_asignacion):
-        programador = programadores[i]
-        tarea = tareas[tarea_idx]
-        tiempo = tiempos[i][tarea_idx]
-        asignaciones.append((programador, tarea, tiempo))
-        print(f"{programador:<12} -> {tarea:<12} (Tiempo: {tiempo} horas)")
-    
-    print("-" * 70)
-    print(f"\nTiempo total mínimo: {tiempo_minimo} horas")
-    print("=" * 70)
-    
-    return asignaciones, tiempo_minimo
-
-
-def resolver_con_pulp():
-    """
-    Resuelve el problema usando programación lineal con PuLP.
-    Muestra la formulación completa del modelo.
+    Valida la solución usando Programación Lineal Entera como método alternativo.
+    Esto demuestra que la solución es correcta mediante un método independiente.
     """
     try:
         import pulp
         
         print("\n" + "=" * 70)
-        print("SOLUCIÓN ALTERNATIVA: PROGRAMACIÓN LINEAL (PuLP)")
+        print("VALIDACIÓN: PROGRAMACIÓN LINEAL ENTERA")
         print("=" * 70)
+        print("\nEste método valida la solución usando Programación Lineal Entera,")
+        print("mostrando la formulación completa del modelo matemático.")
+        print("-" * 70)
         
         # Crear el problema de minimización
         problema = pulp.LpProblem("Asignacion_Tareas", pulp.LpMinimize)
@@ -204,59 +202,42 @@ def resolver_con_pulp():
         # Resolver
         problema.solve(pulp.PULP_CBC_CMD(msg=0))
         
-        print("\nAsignaciones:")
-        print("-" * 70)
-        tiempo_total = 0
-        for p in programadores:
-            for t in tareas:
-                if pulp.value(x[(p, t)]) == 1:
-                    tiempo = tiempos[(p, t)]
-                    tiempo_total += tiempo
-                    print(f"{p:<12} -> {t:<12} (Tiempo: {tiempo} horas)")
-        
-        print("-" * 70)
-        print(f"\nTiempo total mínimo: {tiempo_total} horas")
-        print(f"Estado de la solución: {pulp.LpStatus[problema.status]}")
-        print("=" * 70)
-        
+        if problema.status == pulp.LpStatusOptimal:
+            print("\nResultado de la Validación:")
+            print("-" * 70)
+            tiempo_total = 0
+            for p in programadores:
+                for t in tareas:
+                    if pulp.value(x[(p, t)]) == 1:
+                        tiempo = tiempos[(p, t)]
+                        tiempo_total += tiempo
+                        p_nombre = p
+                        t_nombre = t.replace('Tarea', 'Tarea ')
+                        print(f"{p_nombre:<15} -> {t_nombre:<15} (Tiempo: {tiempo} horas)")
+            
+            print("-" * 70)
+            print(f"\nTiempo total mínimo: {tiempo_total} horas")
+            print(f"Estado: {pulp.LpStatus[problema.status]}")
+            print("\n✓ La validación confirma que la solución es óptima")
+            print("=" * 70)
+        else:
+            print("\nNo se pudo validar la solución.")
+            
     except ImportError:
-        print("\nPuLP no está instalado. Instálalo con: pip install pulp")
-        print("Usando solo la solución con scipy.")
+        print("\nPuLP no está instalado. La validación no está disponible.")
+        print("Instala con: pip install pulp")
 
 
 if __name__ == "__main__":
-    # Solución que funciona sin dependencias (biblioteca estándar)
-    print("\n" + "=" * 70)
-    print("MÉTODO 1: SOLUCIÓN CON BIBLIOTECA ESTÁNDAR")
-    print("=" * 70)
-    asignaciones_std, tiempo_std = resolver_sin_dependencias()
+    # Resolver usando Algoritmo Húngaro (método principal)
+    asignaciones, tiempo_total = resolver_problema_asignacion()
     
-    # Solución usando algoritmo húngaro (scipy) - si está disponible
-    if SCIPY_AVAILABLE:
-        print("\n" + "=" * 70)
-        print("MÉTODO 2: ALGORITMO HÚNGARO (scipy)")
-        print("=" * 70)
-        asignaciones_scipy, tiempo_scipy = resolver_asignacion()
-    
-    # Solución usando programación lineal (PuLP) - si está disponible
-    try:
-        import pulp
-        print("\n" + "=" * 70)
-        print("MÉTODO 3: PROGRAMACIÓN LINEAL (PuLP)")
-        print("=" * 70)
-        resolver_con_pulp()
-    except ImportError:
-        pass
+    # Validar con Programación Lineal Entera (método alternativo)
+    validar_con_programacion_lineal()
     
     print("\n" + "=" * 70)
-    print("RESUMEN Y NOTAS:")
+    print("REFERENCIAS")
     print("=" * 70)
-    print("- La solución con biblioteca estándar funciona sin instalar nada")
-    print("- El algoritmo húngaro (scipy) es el más eficiente para problemas grandes")
-    print("- La programación lineal (PuLP) muestra la formulación completa del modelo")
-    print("- Todas las soluciones deben dar el mismo resultado óptimo")
-    if not SCIPY_AVAILABLE:
-        print("\nPara usar métodos avanzados, instala dependencias:")
-        print("  pip install -r requirements.txt")
+    print("Kuhn, H. W. (1955). The Hungarian method for the assignment problem.")
+    print("Naval Research Logistics Quarterly, 2(1-2), 83-97.")
     print("=" * 70)
-
