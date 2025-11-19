@@ -127,10 +127,10 @@ Se desarrollaron propuestas prácticas para la implementación de estos modelos 
 
 ### Ejercicio 1: Modelo de Asignación
 **Resultado:** Se obtuvo la asignación óptima que minimiza el tiempo total a 24 horas, asignando:
-- Matos → Tarea 1 (6 horas)
-- Tania → Tarea 2 (6 horas)
-- Valeria → Tarea 4 (6 horas)
-- Salvador → Tarea 3 (6 horas)
+- Ana → Tarea 1 (6 horas)
+- Luis → Tarea 2 (6 horas)
+- Marta → Tarea 4 (6 horas)
+- Carlos → Tarea 3 (6 horas)
 
 **Validación:** La solución fue verificada mediante tres métodos independientes (fuerza bruta, algoritmo húngaro, programación lineal), confirmando la optimalidad.
 

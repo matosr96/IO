@@ -29,10 +29,10 @@ Este modelo es un caso especial de programación lineal donde la matriz de restr
 
 | Programador | Tarea 1 | Tarea 2 | Tarea 3 | Tarea 4 |
 |-------------|---------|---------|---------|---------|
-| Matos       | 6       | 8       | 7       | 9       |
-| Tania       | 9       | 6       | 8       | 7       |
-| Valeria     | 7       | 5       | 9       | 6       |
-| Salvador    | 8       | 7       | 6       | 5       |
+| Ana         | 6       | 8       | 7       | 9       |
+| Luis        | 9       | 6       | 8       | 7       |
+| Marta       | 7       | 5       | 9       | 6       |
+| Carlos      | 8       | 7       | 6       | 5       |
 
 **Interpretación:** El valor en la posición (i, j) representa el tiempo estimado (en horas) que tarda el programador i en completar la tarea j.
 
@@ -50,7 +50,7 @@ x_{ij} = \begin{cases}
 \]
 
 Donde:
-- **Programadores:** Matos (i=1), Tania (i=2), Valeria (i=3), Salvador (i=4)
+- **Programadores:** Ana (i=1), Luis (i=2), Marta (i=3), Carlos (i=4)
 - **Tareas:** T1 (j=1), T2 (j=2), T3 (j=3), T4 (j=4)
 
 ### Función Objetivo

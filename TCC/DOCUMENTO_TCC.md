@@ -345,16 +345,16 @@ Asignación de 4 tareas a 4 programadores con los siguientes tiempos estimados (
 
 | Programador | Tarea 1 | Tarea 2 | Tarea 3 | Tarea 4 |
 |-------------|---------|---------|---------|---------|
-| Matos       | 6       | 8       | 7       | 9       |
-| Tania       | 9       | 6       | 8       | 7       |
-| Valeria     | 7       | 5       | 9       | 6       |
-| Salvador    | 8       | 7       | 6       | 5       |
+| Ana         | 6       | 8       | 7       | 9       |
+| Luis        | 9       | 6       | 8       | 7       |
+| Marta       | 7       | 5       | 9       | 6       |
+| Carlos      | 8       | 7       | 6       | 5       |
 
 **Solución Óptima Encontrada:**
-- Matos → Tarea 1 (6 horas)
-- Tania → Tarea 2 (6 horas)
-- Valeria → Tarea 4 (6 horas)
-- Salvador → Tarea 3 (6 horas)
+- Ana → Tarea 1 (6 horas)
+- Luis → Tarea 2 (6 horas)
+- Marta → Tarea 4 (6 horas)
+- Carlos → Tarea 3 (6 horas)
 
 **Tiempo Total Mínimo: 24 horas**
 
