@@ -229,15 +229,23 @@ def validar_con_programacion_lineal():
 
 
 if __name__ == "__main__":
+    print("=" * 70)
+    print("TRABAJO COLABORATIVO CONTEXTUALIZADO (TCC)")
+    print("Ejercicio 1: Asignación de Tareas a Programadores")
+    print("Método Principal: Algoritmo Húngaro")
+    print("=" * 70)
+    
     # Resolver usando Algoritmo Húngaro (método principal)
     asignaciones, tiempo_total = resolver_problema_asignacion()
     
-    # Validar con Programación Lineal Entera (método alternativo)
+    # Validar con Programación Lineal Entera (método alternativo para validación)
+    print("\n")
     validar_con_programacion_lineal()
     
     print("\n" + "=" * 70)
-    print("REFERENCIAS")
+    print("REFERENCIAS BIBLIOGRÁFICAS")
     print("=" * 70)
     print("Kuhn, H. W. (1955). The Hungarian method for the assignment problem.")
     print("Naval Research Logistics Quarterly, 2(1-2), 83-97.")
+    print("https://doi.org/10.1002/nav.3800020109")
     print("=" * 70)

@@ -294,4 +294,4 @@ Taha, H. A. (2017). *Operations Research: An Introduction* (10th ed.). Pearson. 
 
 ---
 
-**Nota:** Este ejercicio forma parte del Trabajo de Conclusión de Curso sobre "Aplicación de Modelos de Investigación de Operaciones al Ciclo de Desarrollo de Software".
+**Nota:** Este ejercicio forma parte del Trabajo Colaborativo Contextualizado (TCC) sobre "Aplicación de Modelos de Investigación de Operaciones al Ciclo de Desarrollo de Software".

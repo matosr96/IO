@@ -1,6 +1,6 @@
 # Índice de la Carpeta TCC
 
-Esta carpeta contiene el desarrollo completo del Trabajo de Conclusión de Curso sobre **Aplicación de Modelos de Investigación de Operaciones al Ciclo de Desarrollo de Software**, incluyendo la implementación de **4 modelos principales** con sus fundamentos teóricos, análisis y resultados.
+Esta carpeta contiene el desarrollo completo del **Trabajo Colaborativo Contextualizado (TCC)** sobre **Aplicación de Modelos de Investigación de Operaciones al Ciclo de Desarrollo de Software**, incluyendo la implementación de **4 modelos principales** con sus fundamentos teóricos, análisis y resultados en un contexto práctico y colaborativo.
 
 ---
 

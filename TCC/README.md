@@ -1,7 +1,7 @@
-# Trabajo de Conclusión de Curso (TCC)
+# Trabajo Colaborativo Contextualizado (TCC)
 ## Aplicación de Modelos de Investigación de Operaciones al Ciclo de Desarrollo de Software
 
-Este trabajo presenta la aplicación de modelos y herramientas de Investigación de Operaciones (IO) al ciclo de desarrollo de software, abordando problemas reales de planificación, asignación de recursos, modelado estocástico y análisis de sistemas.
+Este trabajo colaborativo contextualizado presenta la aplicación de modelos y herramientas de Investigación de Operaciones (IO) al ciclo de desarrollo de software, abordando problemas reales de planificación, asignación de recursos, modelado estocástico y análisis de sistemas en un contexto práctico y colaborativo.
 
 ---
 

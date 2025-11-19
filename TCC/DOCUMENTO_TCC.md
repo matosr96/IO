@@ -1,4 +1,5 @@
-# Aplicación de Modelos de Investigación de Operaciones al Ciclo de Desarrollo de Software
+# Trabajo Colaborativo Contextualizado (TCC)
+## Aplicación de Modelos de Investigación de Operaciones al Ciclo de Desarrollo de Software
 
 ## 1. Descripción de la Problemática
 
