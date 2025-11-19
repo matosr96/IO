@@ -55,14 +55,14 @@ Documentación técnica del trabajo que incluye:
 - Conclusiones del trabajo
 - Referencias bibliográficas
 
-### 2. MARCO_TEORICO.md
+### 3. MARCO_TEORICO.md
 Marco teórico completo que fundamenta los modelos implementados:
 - Fundamentos de Investigación de Operaciones
 - Teoría matemática de cada modelo
 - Formulaciones y teoremas
 - Justificación de la aplicación al desarrollo de software
 
-### 3. ANALISIS_SENSIBILIDAD.md
+### 4. ANALISIS_SENSIBILIDAD.md
 Análisis de sensibilidad realizado para cada modelo:
 - Variaciones analizadas en parámetros clave
 - Resultados del análisis
@@ -71,7 +71,7 @@ Análisis de sensibilidad realizado para cada modelo:
 - Interpretación de resultados
 - Métricas calculadas
 
-### 4. PROPUESTAS_PRACTICAS.md
+### 5. PROPUESTAS_PRACTICAS.md
 Propuestas de implementación desarrolladas para empresas tecnológicas:
 - Integración con herramientas existentes (Jira, GitHub, CI/CD)
 - Diseño de dashboards y visualizaciones
